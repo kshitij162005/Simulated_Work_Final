@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: #ddd;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      transition: #f4f4f4 0.3s ease;
+    }
+  
+  .square:hover {
+    background-color: #bbb;
+  }
+  
+.mole {
+  background-image: url('./mole.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #388E3C;
+  transition: background-color 0.2s ease;
+}
+  
+  #score, #time-left {
+    color: black; 
+    font-size: 2rem;
+    margin: 10px 0px;
+  }
+  
+    .bonus {
+      border: 2px solid gold;
+      background-color: rgba(255, 223, 0, 0.6);
+    }

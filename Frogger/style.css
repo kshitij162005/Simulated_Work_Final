@@ -1,0 +1,176 @@
+/* General body styling */
+body {
+    font-family: 'Press Start 2P', cursive;
+    /* Retro arcade font */
+    text-align: center;
+    background: radial-gradient(circle, #1a1a1d, #0c0c0e);
+    margin: 0;
+    padding: 0;
+    color: #f7f7f7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Timer and Result Display */
+h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff, 0 0 15px #00e5ff;
+}
+
+#time-left {
+    font-weight: bold;
+    color: #ff9f00;
+    text-shadow: 0 0 5px #ff9f00, 0 0 15px #ff9f00;
+}
+
+#result {
+    font-weight: bold;
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f, 0 0 15px #ff007f;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#result.win {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
+}
+
+#result.lose {
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000;
+}
+
+/* Start/Pause Button */
+#start-pause-button {
+    background-color: #292929;
+    color: #00e5ff;
+    font-size: 1.1em;
+    border: 2px solid #00e5ff;
+    border-radius: 5px;
+    padding: 12px 24px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    transition: all 0.3s ease;
+}
+
+#start-pause-button:hover {
+    background-color: #00e5ff;
+    color: #292929;
+    box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff;
+}
+
+/* Grid Container */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 3px;
+    width: 320px;
+    height: 320px;
+    background: #0c0c0e;
+    border: 5px solid #1a1a1d;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px #1a1a1d, 0 0 30px #292929 inset;
+    overflow: hidden;
+}
+
+/* Default block styling */
+.grid div {
+    background-color: #262626;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: inset 0 0 5px #000;
+}
+
+/* Frog styling */
+.frog {
+    background: radial-gradient(circle, #00ff00, #006400);
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+/* Starting block */
+.starting-block {
+    background: linear-gradient(135deg, #4b0082, #8a2be2);
+    box-shadow: inset 0 0 10px #8a2be2;
+}
+
+/* Ending block */
+.ending-block {
+    background: linear-gradient(135deg, #ff4500, #ff6347);
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    box-shadow: 0 0 15px #ff4500, 0 0 30px #ff6347;
+}
+
+/* Logs */
+.log-left,
+.log-right {
+    background: linear-gradient(90deg, #00ced1, #008b8b);
+    border-radius: 5px;
+    position: relative;
+    animation: moveLogs 3s linear infinite;
+    box-shadow: 0 0 10px #00ced1;
+}
+
+/* Cars */
+.car-left,
+.car-right {
+    background: linear-gradient(90deg, #ff0000, #8b0000);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Cars color differentiation */
+.car-left.c1,
+.car-right.c1 {
+    background: linear-gradient(90deg, #ff7f50, #ff4500);
+}
+
+.car-left.c2,
+.car-right.c2 {
+    background: linear-gradient(90deg, #ff6347, #ff4500);
+}
+
+.car-left.c3,
+.car-right.c3 {
+    background: linear-gradient(90deg, #ff0000, #8b0000);
+}
+
+/* Animations for logs */
+@keyframes moveLogsLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveLogsRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

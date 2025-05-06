@@ -1,0 +1,129 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+    color: #333;
+}
+
+h3 {
+    margin: 10px;
+    font-size: 18px;
+    color: #444;
+}
+
+h3 span {
+    text-decoration: underline;
+}
+
+h3#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+}
+
+h3#result.winner {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#current-player {
+    font-weight: bold;
+}
+
+body[data-current-player="1"] #current-player {
+    color: #4a90e2;
+}
+
+body[data-current-player="2"] #current-player {
+    color: #e94e77;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+    border: 3px solid #bbb;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffffff, #f7f9fc);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.grid div {
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.grid div:hover {
+    transform: scale(1.1);
+    background-color: #d6d6d6;
+}
+
+.grid div.taken {
+    cursor: not-allowed;
+}
+
+.grid div.player-one {
+    background-color: #4a90e2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+}
+
+.grid div.player-two {
+    background-color: #e94e77;
+    box-shadow: 0 0 10px rgba(233, 78, 119, 0.6);
+}
+
+button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #357abd, #4a90e2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 14px;
+    color: #777;
+    background: #f0f0f0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+footer a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
